@@ -5,7 +5,6 @@ from .forms import getEndPointForm
 import folium
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
-from django.contrib.gis.geoip2 import GeoIP2
 
 
 def measure_length(request):
@@ -54,7 +53,7 @@ def measure_length(request):
         formInstance.end_point = location
         formInstance.trip = trip
         form.save()
-        distance = Distance.objects.last()
+    distance = Distance.objects.last()
 
     context = {
         'distance': distance,

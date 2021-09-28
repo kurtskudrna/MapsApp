@@ -5,12 +5,12 @@
 <form action="" method="POST">
     {% csrf_token%}
 
-    {{form| crispy }}
+    {{form|crispy}}
     <button type="submit">Submit</button>
 
 </form>
 <div style='max-width: 90%; margin-left: 3rem;'>
-    {{distance}}
+    <h5>{{distance}}</h5>
     {{map|safe}}
 </div>
 
