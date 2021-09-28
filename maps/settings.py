@@ -84,7 +84,6 @@ DATABASES = {
     }
 }
 
-GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
