@@ -1,6 +1,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+
 <form action="" method="POST">
     {% csrf_token%}
 
@@ -9,6 +10,7 @@
 
 </form>
 <div style='max-width: 90%; margin-left: 3rem;'>
+    {{distance}}
     {{map|safe}}
 </div>
 

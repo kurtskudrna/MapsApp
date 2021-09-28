@@ -1,4 +1,5 @@
-from django.shortcuts import redirect, render
+from distance.models import Distance
+from django.shortcuts import get_object_or_404, redirect, render
 from geopy.geocoders.base import NONE_RESULT
 from .forms import getEndPointForm
 import folium
@@ -53,8 +54,10 @@ def measure_length(request):
         formInstance.end_point = location
         formInstance.trip = trip
         form.save()
+        distance = Distance.objects.last()
 
     context = {
+        'distance': distance,
         'form': form,
         'map': map
 
